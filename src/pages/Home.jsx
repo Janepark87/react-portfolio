@@ -3,6 +3,7 @@ import { Suspense } from 'react';
 import useIslandScreenSizer from '../hooks/useIslandScreenSizer';
 import Loader from '../components/Loader';
 import Island from '../models/Island';
+import Sky from '../models/Sky';
 
 export default function Home() {
 	const [islandScale, islandPosition, islandRotation] =
@@ -25,6 +26,8 @@ export default function Home() {
 						groundColor="#000000"
 						intensity={1}
 					/>
+
+					<Sky />
 
 					<Island
 						position={islandPosition}
