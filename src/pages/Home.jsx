@@ -4,6 +4,8 @@ import useIslandScreenSizer from '../hooks/useIslandScreenSizer';
 import Loader from '../components/Loader';
 import Island from '../models/Island';
 import Sky from '../models/Sky';
+import Bird from '../models/Bird';
+import Plane from '../models/Plane';
 
 export default function Home() {
 	const [islandScale, islandPosition, islandRotation] =
@@ -29,11 +31,15 @@ export default function Home() {
 
 					<Sky />
 
+					<Bird />
+
 					<Island
 						position={islandPosition}
 						scale={islandScale}
 						rotation={islandRotation}
 					/>
+
+					<Plane />
 				</Suspense>
 			</Canvas>
 		</section>
