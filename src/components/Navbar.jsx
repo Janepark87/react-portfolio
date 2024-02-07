@@ -11,7 +11,7 @@ export default function Navbar() {
 			</NavLink>
 
 			<nav>
-				<ul className="flex gap-7 text-lg font-medium">
+				<ul className="flex gap-3 text-lg font-medium sm:gap-7">
 					<li>
 						<NavLink to="/">Home</NavLink>
 					</li>

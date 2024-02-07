@@ -6,6 +6,7 @@ export default defineConfig(({ command }) => {
 	const config = {
 		plugins: [react()],
 		base: command === 'serve' ? '/' : '/3d-portfolio/',
+		assetsInclude: ['**/*.glb'],
 	};
 
 	return config;
