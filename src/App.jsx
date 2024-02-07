@@ -1,7 +1,6 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import Root from './layouts/Root';
+import { Root, Home, About, Projects, Contact } from './pages/index';
 import Error from './components/Error';
-import { Home, About, Projects, Contact } from './pages/index';
 
 const router = createBrowserRouter([
 	{
