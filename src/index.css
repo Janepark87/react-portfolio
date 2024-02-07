@@ -18,6 +18,8 @@
 }
 
 body {
+	min-height: 100vh;
+	@apply bg-slate-300/20;
 	font-family: 'Work Sans', sans-serif;
 }
 
@@ -31,15 +33,15 @@ body:has(.card[data-color='green']:hover) {
 
 @layer utilities {
 	.max-container {
-		@apply max-w-5xl mx-auto sm:p-16 pb-12 !pt-[126px] px-8 min-h-[calc(100vh-80px)];
+		@apply mx-auto min-h-[calc(100vh-80px)] max-w-5xl px-8 !pt-[126px] pb-12 sm:p-16;
 	}
 
 	.head-text {
-		@apply sm:text-5xl text-3xl font-semibold sm:leading-snug font-poppins;
+		@apply font-poppins text-3xl font-semibold sm:text-5xl sm:leading-snug;
 	}
 
 	.subhead-text {
-		@apply font-semibold sm:text-3xl text-xl relative font-poppins;
+		@apply relative font-poppins text-xl font-semibold sm:text-3xl;
 	}
 
 	.blue-gradient_text {
@@ -47,43 +49,43 @@ body:has(.card[data-color='green']:hover) {
 	}
 
 	.input {
-		@apply bg-white border border-gray-200 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 mt-2.5 font-normal shadow-card;
+		@apply mt-2.5 block w-full rounded-lg border border-gray-200 bg-white p-2.5 text-sm font-normal text-gray-900 shadow-card focus:border-blue-500 focus:ring-blue-500;
 	}
 
 	.textarea {
-		@apply block p-2.5 w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-200 focus:ring-blue-500 focus:border-blue-500 mt-2.5 font-normal shadow-card;
+		@apply mt-2.5 block w-full rounded-lg border border-gray-200 bg-white p-2.5 text-sm font-normal text-gray-900 shadow-card focus:border-blue-500 focus:ring-blue-500;
 	}
 
 	.btn {
-		@apply text-white bg-gradient-to-r from-[#00c6ff] to-[#0072ff] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center;
+		@apply w-full rounded-lg bg-gradient-to-r from-[#00c6ff] to-[#0072ff] px-5 py-2.5 text-center text-sm font-medium text-white focus:outline-none focus:ring-4 focus:ring-blue-300 sm:w-auto;
 	}
 
 	.header {
-		@apply flex justify-between items-center sm:px-16 px-8 py-4 max-w-5xl mx-auto absolute top-0 bg-transparent z-10 right-0 left-0;
+		@apply absolute left-0 right-0 top-0 z-10 mx-auto flex max-w-5xl items-center justify-between bg-transparent px-8 py-4 sm:px-16;
 	}
 
 	.footer {
-		@apply max-w-5xl mx-auto sm:px-16 pb-6 px-8 flex flex-col gap-7;
+		@apply mx-auto flex max-w-5xl flex-col gap-7 px-8 pb-6 sm:px-16;
 	}
 
 	.footer-container {
-		@apply flex flex-wrap gap-7 items-center justify-between;
+		@apply flex flex-wrap items-center justify-between gap-7;
 	}
 
 	.info-box {
-		@apply mx-5 relative flex text-white flex-col gap-3 max-w-2xl neo-brutalism-blue pt-4 pb-12 px-8;
+		@apply neo-brutalism-blue relative mx-5 flex max-w-2xl flex-col gap-3 px-8 pb-12 pt-4 text-white;
 	}
 
 	.neo-btn {
-		@apply py-3 px-6 rounded-lg text-blue-500 text-center font-semibold sm:w-1/2 w-[90%] -bottom-5 absolute mx-auto right-0 left-0 flex justify-center items-center gap-3;
+		@apply absolute -bottom-5 left-0 right-0 mx-auto flex w-[90%] items-center justify-center gap-3 rounded-lg px-6 py-3 text-center font-semibold text-blue-500 sm:w-1/2;
 	}
 
 	.cta {
-		@apply w-full flex items-center md:flex-row flex-col sm:mt-16 mt-8 gap-7;
+		@apply mt-8 flex w-full flex-col items-center gap-7 sm:mt-16 md:flex-row;
 	}
 
 	.cta-text {
-		@apply text-black-500 font-extrabold flex-1 text-3xl max-md:text-center;
+		@apply flex-1 text-3xl font-extrabold text-black-500 max-md:text-center;
 	}
 }
 
@@ -98,7 +100,9 @@ body:has(.card[data-color='green']:hover) {
 .logo {
 	border-radius: 8.889px;
 	background: #fff;
-	box-shadow: 0px 10px 35px -4px rgba(67, 83, 255, 0.15), 0px 1.5px 4px -1px rgba(67, 83, 255, 0.2);
+	box-shadow:
+		0px 10px 35px -4px rgba(67, 83, 255, 0.15),
+		0px 1.5px 4px -1px rgba(67, 83, 255, 0.2);
 }
 
 .block-container {
@@ -178,11 +182,26 @@ body:has(.card[data-color='green']:hover) {
 	position: relative;
 	border-radius: 10px;
 	border: #2b77e7;
-	box-shadow: 0.6vmin 0.6vmin #336cc1, 1vmin 1vmin #0092db, 1vmin 1vmin #0092db, 0.65vmin 1vmin #0092db, 1vmin 0.65vmin #0092db;
+	box-shadow:
+		0.6vmin 0.6vmin #336cc1,
+		1vmin 1vmin #0092db,
+		1vmin 1vmin #0092db,
+		0.65vmin 1vmin #0092db,
+		1vmin 0.65vmin #0092db;
 }
 
 .neo-brutalism-white {
 	background: #fff;
 	border: #fff;
-	box-shadow: 0.6vmin 0.6vmin #fff, 1vmin 1vmin #d2e4ff, 1vmin 1vmin #d2e4ff, 0.65vmin 1vmin #d2e4ff, 1vmin 0.65vmin #d2e4ff;
+	box-shadow:
+		0.6vmin 0.6vmin #fff,
+		1vmin 1vmin #d2e4ff,
+		1vmin 1vmin #d2e4ff,
+		0.65vmin 1vmin #d2e4ff,
+		1vmin 0.65vmin #d2e4ff;
+}
+
+/* Navigation */
+.header nav a.active {
+	@apply text-blue-500;
 }
