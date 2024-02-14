@@ -7,15 +7,13 @@ Title: Fox's islands
 */
 import { useRef, useEffect } from 'react';
 import { useGLTF } from '@react-three/drei';
-import { a } from '@react-spring/three';
 import { useFrame, useThree } from '@react-three/fiber';
+import { a } from '@react-spring/three';
 import islandScene from '../assets/3d/island.glb';
 
 export default function Island(props) {
 	const islandRef = useRef();
 	const { nodes, materials } = useGLTF(islandScene);
-
-	useEffect(() => {}, []);
 
 	return (
 		<a.group ref={islandRef} {...props} dispose={null}>

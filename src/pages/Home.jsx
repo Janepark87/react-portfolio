@@ -1,15 +1,15 @@
 import { Canvas } from '@react-three/fiber';
-import { Suspense } from 'react';
-import useIslandScreenSizer from '../hooks/useIslandScreenSizer';
+import { useState, Suspense } from 'react';
 import Loader from '../components/Loader';
-import Island from '../models/Island';
+
+import IslandBox from '../models/IslandBox';
+import PlaneBox from '../models/PlaneBox';
 import Sky from '../models/Sky';
 import Bird from '../models/Bird';
-import Plane from '../models/Plane';
 
 export default function Home() {
-	const [islandScale, islandPosition, islandRotation] =
-		useIslandScreenSizer();
+	const [isRotating, setIsRotating] = useState(false);
+
 	return (
 		<section className="relative h-screen w-full">
 			{/* <div className="absolute left-0 right-0 top-28 z-10 flex items-center justify-center">
@@ -17,7 +17,7 @@ export default function Home() {
 			</div> */}
 
 			<Canvas
-				className="relative h-screen w-full"
+				className={`h-screen w-full bg-transparent ${isRotating ? 'cursor-grabbing' : 'cursor-grab'}`}
 				camera={{ near: 0.1, far: 1000 }}
 			>
 				<Suspense fallback={<Loader />}>
@@ -30,16 +30,12 @@ export default function Home() {
 					/>
 
 					<Sky />
-
 					<Bird />
-
-					<Island
-						position={islandPosition}
-						scale={islandScale}
-						rotation={islandRotation}
+					<IslandBox
+						isRotating={isRotating}
+						setIsRotating={setIsRotating}
 					/>
-
-					<Plane />
+					<PlaneBox />
 				</Suspense>
 			</Canvas>
 		</section>
