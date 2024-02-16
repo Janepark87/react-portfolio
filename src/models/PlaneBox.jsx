@@ -7,7 +7,7 @@ export default function PlaneBox() {
 		mobilePosition: [0, -3.2, -1],
 		mobileRotation: [0, 20, 0],
 		desktopScale: [3, 3, 3],
-		desktopPosition: [0, -5.5, -4.5],
+		desktopPosition: [0, -5, -4.5],
 		desktopRotation: [0, 20, 0],
 	};
 	const [isPlaneScale, isPlanePosition, isPlaneRotation] =

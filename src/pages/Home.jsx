@@ -13,7 +13,7 @@ export default function Home() {
 
 	return (
 		<section className="relative h-screen w-full">
-			<div className="absolute left-0 right-0 top-24 z-10 flex items-center justify-center">
+			<div className="absolute left-0 right-0 top-20 z-10 flex items-center justify-center">
 				{currentStage && <HomeInfo currentStage={currentStage} />}
 			</div>
 
