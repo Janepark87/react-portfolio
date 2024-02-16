@@ -1,3 +1,4 @@
+import { useRotation } from '../../../context/RotationContext';
 import InfoBox from './InfoBox';
 import Intro from './Intro';
 
@@ -26,6 +27,12 @@ const renderContent = {
 	),
 };
 
-export default function HomeInfo({ currentStage }) {
-	return renderContent[currentStage] || null;
+export default function HomeBanner() {
+	const { currentStage } = useRotation();
+
+	return (
+		<div className="absolute left-0 right-0 top-20 z-10 flex items-center justify-center">
+			{(currentStage && renderContent[currentStage]) || null}
+		</div>
+	);
 }
