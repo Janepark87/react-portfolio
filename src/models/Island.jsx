@@ -5,15 +5,19 @@ License: CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
 Source: https://sketchfab.com/3d-models/foxs-islands-163b68e09fcc47618450150be7785907
 Title: Fox's islands
 */
-import { useRef, useEffect } from 'react';
+import { useRef } from 'react';
 import { useGLTF } from '@react-three/drei';
-import { useFrame, useThree } from '@react-three/fiber';
 import { a } from '@react-spring/three';
 import islandScene from '../assets/3d/island.glb';
+import useIslandRotation from '../hooks/useIslandRotation';
+import { useRotation } from '../../context/RotationContext';
 
-export default function Island(props) {
+export default function Island({ ...props }) {
 	const islandRef = useRef();
 	const { nodes, materials } = useGLTF(islandScene);
+	const { isRotating, setIsRotating, currentStage, setCurrentStage } =
+		useRotation();
+	useIslandRotation(islandRef, isRotating, setIsRotating, setCurrentStage);
 
 	return (
 		<a.group ref={islandRef} {...props} dispose={null}>
