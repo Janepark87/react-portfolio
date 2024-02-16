@@ -1,14 +1,14 @@
 import { Canvas } from '@react-three/fiber';
-import { useState, Suspense } from 'react';
-import Loader from '../components/Loader';
-
+import { Suspense } from 'react';
+import { useRotation } from '../../context/RotationContext';
 import IslandBox from '../models/IslandBox';
 import PlaneBox from '../models/PlaneBox';
 import Sky from '../models/Sky';
 import Bird from '../models/Bird';
+import Loader from '../components/Loader';
 
 export default function Home() {
-	const [isRotating, setIsRotating] = useState(false);
+	const { isRotating } = useRotation();
 
 	return (
 		<section className="relative h-screen w-full">
@@ -31,10 +31,7 @@ export default function Home() {
 
 					<Sky />
 					<Bird />
-					<IslandBox
-						isRotating={isRotating}
-						setIsRotating={setIsRotating}
-					/>
+					<IslandBox />
 					<PlaneBox />
 				</Suspense>
 			</Canvas>
