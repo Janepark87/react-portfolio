@@ -6,15 +6,16 @@ import PlaneBox from '../models/PlaneBox';
 import Sky from '../models/Sky';
 import Bird from '../models/Bird';
 import Loader from '../components/Loader';
+import HomeInfo from '../features/home/HomeInfo';
 
 export default function Home() {
-	const { isRotating } = useRotation();
+	const { isRotating, currentStage } = useRotation();
 
 	return (
 		<section className="relative h-screen w-full">
-			{/* <div className="absolute left-0 right-0 top-28 z-10 flex items-center justify-center">
-				popup
-			</div> */}
+			<div className="absolute left-0 right-0 top-24 z-10 flex items-center justify-center">
+				{currentStage && <HomeInfo currentStage={currentStage} />}
+			</div>
 
 			<Canvas
 				className={`h-screen w-full bg-transparent ${isRotating ? 'cursor-grabbing' : 'cursor-grab'}`}

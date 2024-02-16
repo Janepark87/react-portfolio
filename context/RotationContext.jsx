@@ -5,7 +5,7 @@ const RotationContext = createContext();
 
 export function RotationProvider({ children }) {
 	const [isRotating, setIsRotating] = useState(false);
-	const [currentStage, setCurrentStage] = useState(0);
+	const [currentStage, setCurrentStage] = useState(1);
 
 	return (
 		<RotationContext.Provider
