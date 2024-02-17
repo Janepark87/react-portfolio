@@ -1,4 +1,4 @@
-import { useRotation } from '../../../context/RotationContext';
+import { use3DAnimation } from '../../../context/AnimationContext';
 import InfoBox from './InfoBox';
 import Intro from './Intro';
 
@@ -28,7 +28,7 @@ const renderContent = {
 };
 
 export default function HomeBanner() {
-	const { currentStage } = useRotation();
+	const { currentStage } = use3DAnimation();
 
 	return (
 		<div className="absolute left-0 right-0 top-20 z-10 flex items-center justify-center">

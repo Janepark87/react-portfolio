@@ -1,14 +1,14 @@
-import { RotationProvider } from '../../context/RotationContext';
+import { AnimationProvider } from '../../context/AnimationContext';
 import HomeBanner from '../features/home/HomeBanner';
 import HomeCanvas from '../features/home/HomeCanvas';
 
 export default function Home() {
 	return (
-		<RotationProvider>
+		<AnimationProvider>
 			<section className="relative h-screen w-full">
 				<HomeBanner />
 				<HomeCanvas />
 			</section>
-		</RotationProvider>
+		</AnimationProvider>
 	);
 }
