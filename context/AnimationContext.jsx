@@ -6,7 +6,16 @@ const AnimationContext = createContext();
 export function AnimationProvider({ children }) {
 	const [isRotating, setIsRotating] = useState(false);
 	const [currentStage, setCurrentStage] = useState(1);
-	const [animationState, setAnimationState] = useState('idle');
+
+	const foxState = {
+		idle: 'Fox_Sit2_Idle',
+		wait: 'Fox_Idle',
+		walk: 'Fox_Walk_InPlace',
+		run: 'Fox_Run_InPlace',
+		sit: 'Fox_Sit_No',
+	};
+
+	const [currentAnimation, setCurrentAnimation] = useState(foxState.idle);
 
 	return (
 		<AnimationContext.Provider
@@ -15,8 +24,9 @@ export function AnimationProvider({ children }) {
 				setIsRotating,
 				currentStage,
 				setCurrentStage,
-				animationState,
-				setAnimationState,
+				currentAnimation,
+				setCurrentAnimation,
+				foxState,
 			}}
 		>
 			{children}

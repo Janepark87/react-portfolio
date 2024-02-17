@@ -31,9 +31,14 @@ body:has(.card[data-color='green']:hover) {
 	background-color: rgb(var(--green-rgb) / 25%);
 }
 
+main {
+	min-height: 100vh;
+}
+
 @layer utilities {
 	.max-container {
-		@apply mx-auto min-h-[calc(100vh-80px)] max-w-5xl px-8 !pt-[126px] pb-12 sm:p-16;
+		/* min-h-[calc(100vh-80px)] */
+		@apply mx-auto max-w-5xl px-8 !pt-[126px] pb-12 sm:p-16;
 	}
 
 	.head-text {
