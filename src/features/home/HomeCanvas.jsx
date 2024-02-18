@@ -1,6 +1,6 @@
 import { Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
-import { use3DAnimation } from '../../../context/AnimationContext';
+import { use3DAnimation } from '../../context/AnimationContext';
 import IslandBox from '../../models/IslandBox';
 import PlaneBox from '../../models/PlaneBox';
 import Sky from '../../models/Sky';

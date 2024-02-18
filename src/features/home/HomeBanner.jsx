@@ -1,4 +1,4 @@
-import { use3DAnimation } from '../../../context/AnimationContext';
+import { use3DAnimation } from '../../context/AnimationContext';
 import InfoBox from './InfoBox';
 import Intro from './Intro';
 

@@ -1,7 +1,7 @@
 import { useRef, useEffect } from 'react';
 import { useGLTF, useAnimations } from '@react-three/drei';
 import foxScene from '../assets/3d/fox.glb';
-import { use3DAnimation } from '../../context/AnimationContext';
+import { use3DAnimation } from '../context/AnimationContext';
 
 export function Fox(props) {
 	const foxRef = useRef();

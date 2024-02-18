@@ -1,4 +1,4 @@
-import { AnimationProvider } from '../../context/AnimationContext';
+import { AnimationProvider } from '../context/AnimationContext';
 import ContactForm from '../features/contact/ContactForm';
 import ContactCanvas from '../features/contact/ContactCanvas';
 import Notification from '../components/Notification';

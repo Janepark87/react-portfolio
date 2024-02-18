@@ -1,4 +1,4 @@
-import { AnimationProvider } from '../../context/AnimationContext';
+import { AnimationProvider } from '../context/AnimationContext';
 import HomeBanner from '../features/home/HomeBanner';
 import HomeCanvas from '../features/home/HomeCanvas';
 

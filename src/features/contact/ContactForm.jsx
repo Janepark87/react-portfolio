@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import emailjs from '@emailjs/browser';
-import { use3DAnimation } from '../../../context/AnimationContext';
+import { use3DAnimation } from '../../context/AnimationContext';
 
 export default function ContactForm({ showAlert, hideAlert }) {
 	const [form, setForm] = useState({ name: '', email: '', message: '' });

@@ -3,7 +3,7 @@ import { useGLTF } from '@react-three/drei';
 import { a } from '@react-spring/three';
 import islandScene from '../assets/3d/island.glb';
 import useIslandRotation from '../hooks/useIslandRotation';
-import { use3DAnimation } from '../../context/AnimationContext';
+import { use3DAnimation } from '../context/AnimationContext';
 
 export default function Island({ ...props }) {
 	const islandRef = useRef();
