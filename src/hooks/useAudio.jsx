@@ -10,10 +10,10 @@ export default function useAudio() {
 
 	useEffect(() => {
 		const audio = audioRef.current;
-		if (isPlayingMusic) audio.current.play();
+		if (isPlayingMusic) audio.play();
 
 		// Clean up the audio on component unmount
-		return () => audio.current.pause();
+		return () => audio.pause();
 	}, [isPlayingMusic]);
 
 	return { isPlayingMusic, setIsPlayingMusic };
