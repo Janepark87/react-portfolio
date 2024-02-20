@@ -1,7 +1,7 @@
-import AboutIntro from '../features/About/AboutIntro.jsx';
-import Skills from '../features/About/Skills.jsx';
-import WorkExperiences from '../features/About/WorkExperiences.jsx';
-import Cta from '../features/About/Cta.jsx';
+import AboutIntro from '../features/about/AboutIntro.jsx';
+import Skills from '../features/about/Skills.jsx';
+import WorkExperiences from '../features/about/WorkExperiences.jsx';
+import Cta from '../components/Cta.jsx';
 
 export default function About() {
 	return (
@@ -9,8 +9,6 @@ export default function About() {
 			<AboutIntro />
 			<Skills />
 			<WorkExperiences />
-
-			<hr className="border-slate-200" />
 
 			<Cta />
 		</section>
