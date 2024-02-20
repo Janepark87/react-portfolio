@@ -26,7 +26,7 @@ const router = createBrowserRouter([
 			},
 		],
 	},
-	{ basename: import.meta.env.DEV ? '/' : '/3d-porfolio/' },
+	{ basename: import.meta.env.DEV ? '/' : '/3d-portfolio/' },
 ]);
 
 export default function App() {
