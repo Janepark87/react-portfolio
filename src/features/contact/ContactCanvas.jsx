@@ -1,5 +1,6 @@
-import { Canvas } from '@react-three/fiber';
 import { Suspense } from 'react';
+import { Canvas } from '@react-three/fiber';
+import { Preload } from '@react-three/drei';
 import Loader from '../../components/Loader';
 import FoxBox from '../../models/FoxBox';
 
@@ -15,6 +16,8 @@ export default function ContactCanvas() {
 				<Suspense fallback={<Loader />}>
 					<FoxBox />
 				</Suspense>
+
+				<Preload all />
 			</Canvas>
 		</div>
 	);

@@ -1,5 +1,6 @@
 import { Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
+import { Preload } from '@react-three/drei';
 import { use3DAnimation } from '../../context/AnimationContext';
 import IslandBox from '../../models/IslandBox';
 import PlaneBox from '../../models/PlaneBox';
@@ -29,6 +30,8 @@ export default function HomeCanvas() {
 				<IslandBox />
 				<PlaneBox />
 			</Suspense>
+
+			<Preload all />
 		</Canvas>
 	);
 }
