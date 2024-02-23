@@ -7,6 +7,7 @@ import PlaneBox from '../../models/PlaneBox';
 import Sky from '../../models/Sky';
 import Bird from '../../models/Bird';
 import Loader from '../../components/Loader';
+import FitObjectCamera from '../../components/FitObjectCamera';
 
 export default function HomeCanvas() {
 	const { isRotating } = use3DAnimation();
@@ -25,6 +26,7 @@ export default function HomeCanvas() {
 			/>
 
 			<Suspense fallback={<Loader />}>
+				<FitObjectCamera fitValue={[10, 4, 3]} />
 				<Sky />
 				<Bird />
 				<IslandBox />

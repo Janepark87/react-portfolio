@@ -9,11 +9,15 @@ export default function Contact() {
 
 	return (
 		<AnimationProvider>
-			<section className="max-container relative flex flex-col lg:flex-row">
+			<section className="max-container relative">
 				{alert.show && <Notification {...alert} />}
 
-				<ContactForm showAlert={showAlert} hideAlert={hideAlert} />
-				<ContactCanvas />
+				<h1 className="head-text">Get in Touch</h1>
+
+				<div className="flex flex-col md:mt-14 md:flex-row">
+					<ContactForm showAlert={showAlert} hideAlert={hideAlert} />
+					<ContactCanvas />
+				</div>
 			</section>
 		</AnimationProvider>
 	);

@@ -34,11 +34,7 @@ export default function Bird() {
 	});
 
 	return (
-		<mesh
-			ref={birdRef}
-			position={[-3, 2, 0]}
-			scale={[0.0025, 0.0025, 0.0025]}
-		>
+		<mesh ref={birdRef} position={[-3, 2, 0]} scale={[0.003, 0.003, 0.003]}>
 			<primitive object={scene} />
 		</mesh>
 	);

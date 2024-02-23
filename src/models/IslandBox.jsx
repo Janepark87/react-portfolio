@@ -3,11 +3,11 @@ import Island from './Island';
 
 export default function IslandBox() {
 	const sizeValue = {
-		mobileScale: [0.75, 0.75, 0.75],
+		mobileScale: [0.85, 0.85, 0.85],
 		mobilePosition: [0, -6.5, -43],
 		mobileRotation: [0.2, -0.1, 0],
 		desktopScale: [1, 1, 1],
-		desktopPosition: [0, -6.5, -43],
+		desktopPosition: [0, -6.5, -45],
 		desktopRotation: [0.1, -0.1, 0],
 	};
 	const [islandScale, islandPosition, islandRotation] =

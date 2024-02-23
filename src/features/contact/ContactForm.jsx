@@ -7,9 +7,13 @@ export default function ContactForm({ showAlert, hideAlert }) {
 	const [isLoading, setIsLoading] = useState(false);
 	const { foxState, setCurrentAnimation } = use3DAnimation();
 
-	const handleChange = (e) =>
-		setForm({ ...form, [e.target.name]: e.target.value });
+	const handleChange = (e) => {
+		const { name, value } = e.target;
+		setForm({ ...form, [name]: value });
+	};
+
 	const handleFocus = () => setCurrentAnimation(foxState.walk);
+
 	const handleBlur = () => setCurrentAnimation(foxState.wait);
 
 	const handleSubmit = (e) => {
@@ -59,11 +63,9 @@ export default function ContactForm({ showAlert, hideAlert }) {
 
 	return (
 		<div className="flex min-w-[50%] flex-1 flex-col">
-			<h1 className="head-text">Get in Touch</h1>
-
 			<form
 				onSubmit={handleSubmit}
-				className="mt-14 flex w-full flex-col gap-7"
+				className="flex w-full flex-col gap-7"
 			>
 				<label className="font-semibold text-black-500">
 					Name
@@ -71,7 +73,7 @@ export default function ContactForm({ showAlert, hideAlert }) {
 						type="text"
 						name="name"
 						className="input"
-						placeholder="Your fullname"
+						placeholder="Your name"
 						value={form.name}
 						required
 						onChange={handleChange}
@@ -80,7 +82,7 @@ export default function ContactForm({ showAlert, hideAlert }) {
 					/>
 				</label>
 				<label className="font-semibold text-black-500">
-					email
+					Email
 					<input
 						type="email"
 						name="email"

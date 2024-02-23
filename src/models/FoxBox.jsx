@@ -3,12 +3,12 @@ import { Fox } from './Fox';
 
 export default function FoxBox() {
 	const sizeValue = {
-		mobileScale: [0.2, 0.2, 0.2],
-		mobilePosition: [0, -2, 0],
-		mobileRotation: [0.35, -0.6, 0],
-		desktopScale: [0.18, 0.18, 0.18],
-		desktopPosition: [0.5, -2, 0],
-		desktopRotation: [0.3, -0.7, 0],
+		mobileScale: [0.75, 0.75, 0.75],
+		mobilePosition: [0, -5.5, 0],
+		mobileRotation: [0.3, -0.5, 0],
+		desktopScale: [0.6, 0.6, 0.6],
+		desktopPosition: [0, -1.5, 0],
+		desktopRotation: [0.3, -0.5, 0],
 	};
 	const [islandScale, islandPosition, islandRotation] =
 		useObjectScreenSizer(sizeValue);
