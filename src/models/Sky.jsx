@@ -10,9 +10,8 @@ export default function Sky() {
 	const { isRotating } = use3DAnimation();
 
 	useFrame((_, deltal) => {
-		if (isRotating) {
-			skyRef.current.rotation.y += 0.5 * deltal;
-		}
+		skyRef.current.rotation.y += 0.125 * deltal;
+		if (isRotating) skyRef.current.rotation.y += 0.5 * deltal;
 	});
 
 	return (
